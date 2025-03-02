@@ -7,8 +7,8 @@ import { UILinkVariant } from '@/types/enums';
 
 const menu = [
   {
-    title: 'Blog',
-    link: '/blog',
+    title: 'Blogs',
+    link: '/blogs',
   },
   {
     title: 'About',
@@ -26,7 +26,7 @@ const Nav = () => {
           <li key={index}>
             <Link
               href={menuItem.link}
-              className={`font-raleway font-medium ${pathname.startsWith(menuItem.link) ? 'text-primary' : 'text-grey-33'}`}
+              className={`font-raleway font-medium transition-colors duration-500 ease-in-out hover:text-primary ${pathname.startsWith(menuItem.link) ? 'text-primary' : 'text-grey-33'}`}
             >
               {menuItem.title}
             </Link>

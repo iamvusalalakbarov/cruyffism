@@ -2,7 +2,8 @@ import HeroSection from '@/components/HeroSection';
 import Image from 'next/image';
 import UILink from '@/components/ui/UILink';
 import { UILinkVariant } from '@/types/enums';
-import Link from 'next/link';
+import SubscribeSection from '@/components/SubscribeSection';
+import UIBlogCard from '@/components/ui/UIBlogCard';
 
 const recentPosts = [
   {
@@ -74,14 +75,9 @@ export default function Home() {
                 />
               </div>
 
-              <div className="flex items-center gap-x-1.5 lg:gap-x-2">
-                <span className="text-xs font-bold uppercase text-grey-33">
-                  DEVELOPMENT
-                </span>
-                <time className="text-xs font-medium text-grey-99">
-                  16 March 2023
-                </time>
-              </div>
+              <time className="text-xs font-medium text-grey-99">
+                16 March 2023
+              </time>
 
               <h4 className="max-w-[784px] text-grey-33">
                 How to make a Game look more attractive with New VR & AI
@@ -129,9 +125,6 @@ export default function Home() {
             <div className="flex h-full flex-1 flex-col justify-between pb-8 pt-4">
               <div>
                 <div className="mb-7 flex items-center gap-x-1.5 lg:gap-x-2">
-                  <span className="text-xs font-bold uppercase text-grey-33">
-                    {recentPosts[0].category}
-                  </span>
                   <time className="text-xs font-medium text-grey-99">
                     {recentPosts[0].date}
                   </time>
@@ -152,76 +145,13 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
             {recentPosts.slice(1).map((post, index) => (
-              <div key={index} className="space-y-8">
-                <div className="relative h-[360px] w-full overflow-hidden rounded-2xl">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    unoptimized
-                    className="object-cover"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-y-4">
-                  <div className="flex items-center gap-x-1.5 lg:gap-x-2">
-                    <span className="text-xs font-bold uppercase text-grey-33">
-                      {post.category}
-                    </span>
-                    <time className="text-xs font-medium text-grey-99">
-                      {post.date}
-                    </time>
-                  </div>
-
-                  <h6 className="w-5/6 text-grey-33">{post.title}</h6>
-
-                  <p className="line-clamp-3 text-grey-66">{post.content}</p>
-
-                  <Link
-                    href="#"
-                    className="text-lg font-bold text-primary hover:underline"
-                  >
-                    Read More...
-                  </Link>
-                </div>
-              </div>
+              <UIBlogCard key={index} blog={post} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Subscribe */}
-      <section className="flex items-center justify-center bg-primary px-6 py-[60px] lg:px-0 lg:py-[100px]">
-        <div>
-          <h2 className="mb-8 max-w-3xl text-center text-white lg:mb-12">
-            Get our stories delivered From us to your inbox weekly.
-          </h2>
-
-          <form
-            method="post"
-            className="mx-auto mb-6 flex lg:max-w-[494px] justify-center gap-2 flex-col lg:flex-row"
-          >
-            <input
-              type="email"
-              placeholder="Your Email"
-              required
-              className="flex-1 rounded-lg bg-white px-4 py-3 font-raleway text-grey-33 outline-0 placeholder:text-[#5A7184] lg:px-6 lg:py-[18px]"
-            />
-
-            <button
-              type="submit"
-              className="rounded-lg border border-white px-5 lg:px-8 py-3 lg:py-4 font-raleway text-lg text-white transition-colors duration-500 ease-in-out hover:bg-white hover:text-primary"
-            >
-              Get started
-            </button>
-          </form>
-
-          <p className="mx-auto max-w-[555px] text-center font-raleway text-[#bbb]">
-            Get a response tomorrow if you submit by 9pm today. If we received
-            after 9pm will get a reponse the following day.
-          </p>
-        </div>
-      </section>
+      <SubscribeSection />
     </>
   );
 }
