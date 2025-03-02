@@ -1,8 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Raleway, Roboto } from 'next/font/google';
-import '../styles/globals.css';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import '../styles/globals.css';
 
 const raleway = Raleway({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ const RootLayout: React.FC<IRootLayoutProps> = (props) => {
       >
         <Header />
         <main>{props.children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -14,10 +14,14 @@ const UILink: React.FC<IUILinkProps> = (props) => {
     <Link
       href={props.href}
       className={clsx(
-        'rounded-lg px-8 py-3 font-raleway text-xs font-semibold lg:px-10 lg:py-4 lg:text-base',
+        'flex w-fit items-center justify-center rounded-lg border px-12 py-4 text-xs font-semibold transition-colors duration-500 ease-in-out lg:px-10 lg:py-4 lg:text-base',
         {
-          'bg-primary text-white': props.variant === UILinkVariant.primary,
-          'bg-white text-grey-33': props.variant === UILinkVariant.secondary,
+          'border-transparent bg-primary font-raleway text-white hover:border-primary hover:bg-white hover:text-primary':
+            props.variant === UILinkVariant.primary,
+          'border-primary bg-white text-primary hover:bg-primary hover:text-white':
+            props.variant === UILinkVariant.secondary,
+          'border-transparent bg-white text-grey-33 hover:bg-grey-33 hover:text-white':
+            props.variant === UILinkVariant.tertiary,
         }
       )}
     >
