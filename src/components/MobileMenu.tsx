@@ -14,7 +14,7 @@ const MobileMenu: React.FC<IMobileMenuProps> = (props) => {
   return (
     <div
       className={clsx(
-        "fixed top-[65px] right-0 left-0 h-[calc(100vh-65px)] overflow-hidden bg-white transition-all duration-500 ease-in-out md:hidden",
+        "fixed top-[65px] right-0 left-0 z-50 h-[calc(100vh-65px)] overflow-hidden bg-white transition-all duration-500 ease-in-out md:hidden",
         props.isOpen ? "translate-x-0" : "translate-x-full",
       )}
     >
