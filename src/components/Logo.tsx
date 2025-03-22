@@ -1,8 +1,17 @@
+import React from "react";
 import Link from "next/link";
+import { clsx } from "clsx";
 
-const Logo = () => {
+interface ILogoProps {
+  white?: boolean;
+}
+
+const Logo: React.FC<ILogoProps> = (props) => {
   return (
-    <Link href="/" className="text-primary text-xl font-bold">
+    <Link
+      href="/"
+      className={clsx("text-xl font-bold", props.white ? "text-white" : "text-primary")}
+    >
       Cruyffism
     </Link>
   );
