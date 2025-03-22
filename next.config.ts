@@ -5,6 +5,15 @@ const nextConfig: NextConfig = {
     config.cache = false; // Disable Webpack persistent caching
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

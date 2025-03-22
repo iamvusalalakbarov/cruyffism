@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #FF6B00;
+  --color-primary-0: #fff2e2;
+  --color-primary-1: #ffe3cc;
+  --color-primary-2: #ffc59a;
+  --color-primary-3: #ffa564;
+  --color-primary-4: #fe8a37;
+  --color-primary-5: #fe791a;
+  --color-primary-6: #ff7009;
+  --color-primary-7: #e45f00;
+  --color-primary-8: #cb5300;
+  --color-primary-9: #b14500;
+}
+
+@layer base {
+  .wrapper {
+    @apply mx-auto max-w-[1600px] px-4 lg:px-20;
+  }
+
+  .underline-on-hover {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1.5px;
+      left: 0;
+      right: 0;
+      height: 0.1rem;
+      width: 0;
+      background: var(--color-primary);
+      transition: width 500ms ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
