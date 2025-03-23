@@ -50,11 +50,11 @@ const articles = [
 
 export default function HomePage() {
   return (
-    <>
+    <main>
       <HeroSection />
       <QuoteOfTheDay />
 
-      <section className="wrapper py-10 lg:py-20">
+      <section className="wrapper py-10 lg:py-16">
         <div className="mb-4 flex items-center justify-between lg:mb-8">
           <h2 className="text-primary text-2xl font-bold lg:text-3xl">Recent Articles</h2>
 
@@ -102,6 +102,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-    </>
+    </main>
   );
 }

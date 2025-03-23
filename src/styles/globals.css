@@ -18,24 +18,4 @@
   .wrapper {
     @apply mx-auto max-w-[1600px] px-4 lg:px-20;
   }
-
-  .underline-on-hover {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -1.5px;
-      left: 0;
-      right: 0;
-      height: 0.1rem;
-      width: 0;
-      background: var(--color-primary);
-      transition: width 500ms ease-in-out;
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
-  }
 }
