@@ -1,13 +1,14 @@
 import QuoteOfTheDay from "@/components/QuoteOfTheDay";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 
 export default function AboutPage() {
   return (
     <main className="wrapper">
-      <section className="bg-primary space-y-4 rounded-lg py-10 text-center text-white lg:py-16">
-        <h1 className="text-3xl font-bold lg:text-4xl">About Cruyffism</h1>
-        <p>Exploring the philosophy of Johan Cruyff and its impact on modern football.</p>
-      </section>
+      <PageHero
+        title="About Cruyffism"
+        description="Exploring the philosophy of Johan Cruyff and its impact on modern football."
+      />
 
       <section className="space-y-4 py-10 text-gray-700 lg:py-16">
         <p>
@@ -23,7 +24,7 @@ export default function AboutPage() {
 
       <QuoteOfTheDay />
 
-      <section className="py-10 text-center lg:py-16 space-y-4">
+      <section className="space-y-4 py-10 text-center lg:py-16">
         <p className="text-gray-700">Want to explore more? Check out our latest articles!</p>
         <Link
           href="/articles"
