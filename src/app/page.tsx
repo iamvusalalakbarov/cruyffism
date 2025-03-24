@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import QuoteOfTheDay from "@/components/QuoteOfTheDay";
 import Link from "next/link";
-import Image from "next/image";
+import ArticleCard from "@/components/ArticleCard";
 
 const articles = [
   {
@@ -68,28 +68,7 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {articles.map((article, index) => (
-            <Link
-              key={index}
-              href={`/articles/${article.slug}`}
-              className="group block overflow-hidden rounded-lg bg-white shadow"
-            >
-              <div className="relative h-60 overflow-hidden">
-                <Image
-                  src={article.coverImage}
-                  alt={article.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  unoptimized
-                />
-              </div>
-
-              <div className="flex flex-col justify-between p-4">
-                <h3 className="line-clamp-2 text-xl font-semibold transition group-hover:text-orange-600">
-                  {article.title}
-                </h3>
-                <p className="mt-2 line-clamp-3 text-gray-600">{article.summary}</p>
-              </div>
-            </Link>
+            <ArticleCard key={index} article={article} />
           ))}
         </div>
 
