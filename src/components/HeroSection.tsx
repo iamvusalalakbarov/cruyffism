@@ -21,7 +21,7 @@ const HeroSection = () => {
         unoptimized
       />
 
-      <div className="wrapper lg:max-w-1/2 space-y-4 text-center">
+      <div className="wrapper space-y-4 text-center xl:max-w-4xl">
         <h1 className="text-4xl font-bold md:text-5xl">
           Total Football: The Legacy of Johan Cruyff
         </h1>
