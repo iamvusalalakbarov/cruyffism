@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Container, Burger } from "@mantine/core";
+import { Burger } from "@mantine/core";
 import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
@@ -21,7 +21,7 @@ const Header = () => {
           isOpen ? "bg-white" : "bg-white/75",
         )}
       >
-        <Container size="xl">
+        <div className="wrapper">
           <div className="flex items-center justify-between py-4">
             <Logo />
 
@@ -46,7 +46,7 @@ const Header = () => {
               className="md:hidden"
             />
           </div>
-        </Container>
+        </div>
       </header>
       <MobileMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </>
