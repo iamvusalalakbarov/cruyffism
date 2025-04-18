@@ -67,11 +67,6 @@ export async function RecentArticles({ title = "Son Məqalələr", excludeId, co
               title={article.title}
               description={article.description}
               date={formatDate(new Date(article.date_published))}
-              // date={new Date(article.date_published).toLocaleDateString("en-US", {
-              //   year: "numeric",
-              //   month: "long",
-              //   day: "numeric",
-              // })}
               readTime={article.read_time || "5 min read"}
               viewCount={Number(article.view_count)}
               tags={article.tags.filter(Boolean)}

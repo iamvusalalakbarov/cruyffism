@@ -6,6 +6,7 @@ import { ArticleCard } from "@/components/article-card"
 import { Pagination } from "@/components/pagination"
 import { getArticles } from "@/actions/article-actions"
 import { SkeletonCard } from "@/components/skeleton-card"
+import { formatDate } from "@/lib/utils";
 
 export default function ArticlesPage() {
   const [currentPage, setCurrentPage] = useState(1)
@@ -96,11 +97,7 @@ export default function ArticlesPage() {
                     image={article.image_url || "/placeholder.svg?height=200&width=400"}
                     title={article.title}
                     description={article.description}
-                    date={new Date(article.date_published).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
+                    date={formatDate(new Date(article.date_published))}
                     readTime={article.read_time || "5 min read"}
                     viewCount={Number(article.view_count)}
                     tags={article.tags.filter(Boolean)}

@@ -3,7 +3,8 @@ import { notFound } from "next/navigation"
 import { Clock, Eye, Calendar } from "lucide-react"
 import { getArticleBySlug, incrementViewCount } from "@/actions/article-actions"
 import { RecentArticles } from "@/components/recent-articles"
-import { getArticles } from "@/actions/article-actions" // Import getArticles
+import { getArticles } from "@/actions/article-actions"
+import { formatDate } from "@/lib/utils"; // Import getArticles
 
 interface ArticlePageProps {
   params: {
@@ -46,19 +47,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center">
                 <Calendar className="mr-1 h-4 w-4" />
-                {new Date(article.date_published).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
+                {formatDate(new Date(article.date_published))}
               </span>
               <span className="flex items-center">
                 <Clock className="mr-1 h-4 w-4" />
-                {article.read_time || "5 min read"}
+                {article.read_time || "5"} dəqiqə oxuma vaxtı
               </span>
               <span className="flex items-center">
                 <Eye className="mr-1 h-4 w-4" />
-                {Number(article.view_count).toLocaleString()} views
+                {Number(article.view_count).toLocaleString()} baxış sayı
               </span>
             </div>
           </div>

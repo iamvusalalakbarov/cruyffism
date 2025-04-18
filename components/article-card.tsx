@@ -51,7 +51,7 @@ export function ArticleCard({ image, title, description, date, readTime, viewCou
               </span>
               <span className="flex items-center text-xs text-muted-foreground">
                 <Clock className="h-3.5 w-3.5 mr-1" />
-                {readTime} oxuma vaxtı
+                {readTime} dəqiqə oxuma vaxtı
               </span>
             </div>
           </div>
