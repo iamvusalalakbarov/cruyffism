@@ -87,22 +87,22 @@ export default function ContactPage() {
           </div>
 
           {/* Social Media */}
-          <div className="flex justify-center space-x-6 mb-12">
-            <a
-              href="#"
-              className="bg-orange-100 dark:bg-orange-900/30 p-3 rounded-full text-orange-600 hover:bg-orange-200 dark:hover:bg-orange-800/30 transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="h-6 w-6" />
-            </a>
-            <a
-              href="#"
-              className="bg-orange-100 dark:bg-orange-900/30 p-3 rounded-full text-orange-600 hover:bg-orange-200 dark:hover:bg-orange-800/30 transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram className="h-6 w-6" />
-            </a>
-          </div>
+          {/*<div className="flex justify-center space-x-6 mb-12">*/}
+          {/*  <a*/}
+          {/*    href="#"*/}
+          {/*    className="bg-orange-100 dark:bg-orange-900/30 p-3 rounded-full text-orange-600 hover:bg-orange-200 dark:hover:bg-orange-800/30 transition-colors"*/}
+          {/*    aria-label="Facebook"*/}
+          {/*  >*/}
+          {/*    <Facebook className="h-6 w-6" />*/}
+          {/*  </a>*/}
+          {/*  <a*/}
+          {/*    href="#"*/}
+          {/*    className="bg-orange-100 dark:bg-orange-900/30 p-3 rounded-full text-orange-600 hover:bg-orange-200 dark:hover:bg-orange-800/30 transition-colors"*/}
+          {/*    aria-label="Instagram"*/}
+          {/*  >*/}
+          {/*    <Instagram className="h-6 w-6" />*/}
+          {/*  </a>*/}
+          {/*</div>*/}
 
           {/* Contact Form */}
           <div className="max-w-2xl mx-auto">
