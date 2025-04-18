@@ -11,30 +11,6 @@ function hashPassword(password: string): string {
   return crypto.createHash("sha256").update(password).digest("hex");
 }
 
-// Create admin user if it doesn't exist
-export async function ensureAdminExists() {
-  try {
-    const users = await sql`SELECT * FROM users WHERE username = 'admin'`;
-
-    if (users.length === 0) {
-      // Create default admin user
-      const passwordHash = hashPassword("password"); // Default password
-
-      await sql`
-        INSERT INTO users (username, email, password_hash, is_admin)
-        VALUES ('admin', 'admin@cruyffism.com', ${passwordHash}, true)
-      `;
-
-      console.log("Default admin user created");
-    }
-
-    return { success: true };
-  } catch (error) {
-    console.error("Error ensuring admin exists:", error);
-    return { success: false };
-  }
-}
-
 // Login function
 export async function login(formData: FormData) {
   try {

@@ -12,7 +12,6 @@ import { ChevronLeft, ChevronRight, FileText, Home, LayoutDashboard, Menu, Tag, 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/user-avatar";
-import { initializeAdmin } from "../init";
 import { ToastProvider } from "@/contexts/toast-context";
 import { Toaster } from "@/components/ui/toaster";
 import { ScrollToTop } from "@/components/scroll-to-top";
@@ -27,11 +26,6 @@ export default function DashboardLayout({
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    // Initialize admin user when the dashboard loads
-    initializeAdmin();
-  }, []);
 
   const toggleSidebar = () => {
     setCollapsed(!collapsed);
