@@ -13,8 +13,8 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Cruyffism - The Philosophy of Total Football",
-  description: "A modern blog dedicated to Johan Cruyff's football philosophy and legacy",
+  title: "Cruyffism",
+  description: "A modern blog dedicated to Johan Cruyff's football philosophy and legacy."
 }
 
 export default function RootLayout({
