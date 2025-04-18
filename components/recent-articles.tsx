@@ -3,6 +3,7 @@ import { ArrowRight, AlertTriangle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ArticleCard } from "@/components/article-card"
 import { getArticles } from "@/actions/article-actions"
+import { formatDate } from "@/lib/utils";
 
 interface RecentArticlesProps {
   title?: string
@@ -10,7 +11,7 @@ interface RecentArticlesProps {
   count?: number
 }
 
-export async function RecentArticles({ title = "Recent Articles", excludeId, count = 3 }: RecentArticlesProps) {
+export async function RecentArticles({ title = "Son Məqalələr", excludeId, count = 3 }: RecentArticlesProps) {
   // Get articles from the database
   const { articles, error } = await getArticles()
 
@@ -23,7 +24,7 @@ export async function RecentArticles({ title = "Recent Articles", excludeId, cou
             <h2 className="text-3xl font-bold tracking-tighter">{title}</h2>
             <Link href="/articles">
               <Button variant="outline">
-                View All Articles
+                Bütün Məqalələrə Bax
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -53,7 +54,7 @@ export async function RecentArticles({ title = "Recent Articles", excludeId, cou
           <h2 className="text-3xl font-bold tracking-tighter">{title}</h2>
           <Link href="/articles">
             <Button variant="outline">
-              View All Articles
+              Bütün Məqalələrə Bax
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -65,11 +66,12 @@ export async function RecentArticles({ title = "Recent Articles", excludeId, cou
               image={article.image_url || "/placeholder.svg?height=200&width=400"}
               title={article.title}
               description={article.description}
-              date={new Date(article.date_published).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
+              date={formatDate(new Date(article.date_published))}
+              // date={new Date(article.date_published).toLocaleDateString("en-US", {
+              //   year: "numeric",
+              //   month: "long",
+              //   day: "numeric",
+              // })}
               readTime={article.read_time || "5 min read"}
               viewCount={Number(article.view_count)}
               tags={article.tags.filter(Boolean)}

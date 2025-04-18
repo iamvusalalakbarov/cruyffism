@@ -49,11 +49,11 @@ export default function ContactPage() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center space-y-4">
             <div className="inline-block rounded-lg bg-orange-100 dark:bg-orange-900/30 px-3 py-1 text-sm text-orange-800 dark:text-orange-300">
-              Get in Touch
+              Əlaqə
             </div>
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Contact Us</h1>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Cruyffism ilə Əlaqə</h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              Have questions, suggestions, or want to contribute to Cruyffism? We'd love to hear from you.
+              Sualınız, təklifiniz, şikayətiniz və ya töhfəniz varsa, rahatlıqla bölüşə bilərsiniz.
             </p>
           </div>
         </div>
@@ -66,10 +66,10 @@ export default function ContactPage() {
             <Card>
               <CardContent className="flex flex-col items-center text-center p-6">
                 <Mail className="h-10 w-10 text-orange-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Email</h3>
-                <p className="text-muted-foreground mb-4">We'll respond within 24 hours</p>
-                <a href="mailto:info@cruyffism.com" className="text-orange-600 hover:text-orange-700 transition-colors">
-                  info@cruyffism.com
+                <h3 className="text-xl font-bold mb-2">E-poçt</h3>
+                {/*<p className="text-muted-foreground mb-4">24 saat ərzində cavablandırılır.</p>*/}
+                <a href="mailto:iamvusalalakbarov@gmail.com" className="text-orange-600 hover:text-orange-700 transition-colors">
+                  iamvusalalakbarov@gmail.com
                 </a>
               </CardContent>
             </Card>
@@ -77,10 +77,10 @@ export default function ContactPage() {
             <Card>
               <CardContent className="flex flex-col items-center text-center p-6">
                 <Phone className="h-10 w-10 text-orange-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Phone</h3>
-                <p className="text-muted-foreground mb-4">Monday-Friday, 9am-5pm CET</p>
-                <a href="tel:+31201234567" className="text-orange-600 hover:text-orange-700 transition-colors">
-                  +31 20 123 4567
+                <h3 className="text-xl font-bold mb-2">Telefon</h3>
+                {/*<p className="text-muted-foreground mb-4">Monday-Friday, 9am-5pm CET</p>*/}
+                <a href="tel:+994993651951" className="text-orange-600 hover:text-orange-700 transition-colors">
+                  +994 99 365 19 51
                 </a>
               </CardContent>
             </Card>
@@ -106,12 +106,12 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-center mb-6">Send Us a Message</h2>
+            <h2 className="text-2xl font-bold text-center mb-6">Əlaqə Formu</h2>
             {isSubmitted ? (
               <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6 text-center">
-                <h3 className="text-xl font-medium text-green-800 dark:text-green-300 mb-2">Message Sent!</h3>
+                <h3 className="text-xl font-medium text-green-800 dark:text-green-300 mb-2">Müraciət göndərildi!</h3>
                 <p className="text-green-700 dark:text-green-400">
-                  Thank you for contacting us. We'll get back to you as soon as possible.
+                  Əlaqə saxladığınız üçün təşəkkür edirik! Sizə ən qısa zamanda geridönüş ediləcək.
                 </p>
               </div>
             ) : (
@@ -119,7 +119,7 @@ export default function ContactPage() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
-                      Your Name
+                      Adınız
                     </label>
                     <Input
                       id="name"
@@ -127,13 +127,13 @@ export default function ContactPage() {
                       value={formState.name}
                       onChange={handleChange}
                       required
-                      placeholder="John Doe"
+                      placeholder="Adınızı daxil edin"
                       className="focus-visible:ring-0 focus-visible:ring-offset-0"
                     />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
-                      Your Email
+                      E-poçt
                     </label>
                     <Input
                       id="email"
@@ -142,14 +142,14 @@ export default function ContactPage() {
                       value={formState.email}
                       onChange={handleChange}
                       required
-                      placeholder="john@example.com"
+                      placeholder="numune@gmail.com"
                       className="focus-visible:ring-0 focus-visible:ring-offset-0"
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium">
-                    Subject
+                    Mövzu
                   </label>
                   <Input
                     id="subject"
@@ -157,13 +157,13 @@ export default function ContactPage() {
                     value={formState.subject}
                     onChange={handleChange}
                     required
-                    placeholder="How can we help you?"
+                    placeholder="Müraciətinizin başlığını qeyd edin"
                     className="focus-visible:ring-0 focus-visible:ring-offset-0"
                   />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">
-                    Message
+                    Kontent
                   </label>
                   <Textarea
                     id="message"
@@ -171,7 +171,7 @@ export default function ContactPage() {
                     value={formState.message}
                     onChange={handleChange}
                     required
-                    placeholder="Your message here..."
+                    placeholder="Fikirlərinizi bizimlə bölüşün..."
                     rows={6}
                     className="focus-visible:ring-0 focus-visible:ring-offset-0"
                   />
@@ -183,12 +183,12 @@ export default function ContactPage() {
                 >
                   {isSubmitting ? (
                     <>
-                      <span className="mr-2">Sending...</span>
+                      <span className="mr-2">Göndərilir...</span>
                       <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
                     </>
                   ) : (
                     <>
-                      Send Message
+                      Göndər
                       <Send className="ml-2 h-4 w-4" />
                     </>
                   )}

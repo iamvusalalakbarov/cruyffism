@@ -14,18 +14,18 @@ export function Header() {
         </div>
         <nav className="hidden md:flex gap-6">
           <Link href="/articles" className="text-sm font-medium hover:text-orange-600 transition-colors">
-            Articles
+            Məqalələr
           </Link>
           <Link href="/about" className="text-sm font-medium hover:text-orange-600 transition-colors">
-            About
+            Haqqımızda
           </Link>
           <Link href="/contact" className="text-sm font-medium hover:text-orange-600 transition-colors">
-            Contact
+            Əlaqə
           </Link>
         </nav>
         <div className="flex items-center gap-2">
           <ScrollButton targetId="newsletter" variant="outline">
-            Subscribe
+            Abunə ol
           </ScrollButton>
           <ThemeToggle />
           <MobileMenu />

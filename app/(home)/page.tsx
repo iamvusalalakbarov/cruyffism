@@ -18,7 +18,7 @@ export default async function Home() {
           <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center">
             <div className="flex flex-col justify-center space-y-4">
               <div className="inline-block rounded-lg bg-orange-100 dark:bg-orange-900/30 px-3 py-1 text-sm text-orange-800 dark:text-orange-300">
-                Featured Article
+                Önə çıxarılmış məqalə
               </div>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 Total Football: The Revolution That Changed the Game Forever
@@ -30,7 +30,7 @@ export default async function Home() {
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="/articles/total-football-tactical-revolution">
                   <Button className="bg-orange-600 hover:bg-orange-700 dark:bg-orange-600 dark:hover:bg-orange-700">
-                    Read Article
+                    Məqaləni oxu
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>

@@ -1,52 +1,60 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 bg-gradient-to-b from-orange-50 to-white dark:from-orange-950/20 dark:to-background">
+      {/* Hero Bölməsi */}
+      <section
+        className="w-full py-12 md:py-24 bg-gradient-to-b from-orange-50 to-white dark:from-orange-950/20 dark:to-background">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center space-y-4">
-            <div className="inline-block rounded-lg bg-orange-100 dark:bg-orange-900/30 px-3 py-1 text-sm text-orange-800 dark:text-orange-300">
-              About
+            <div
+              className="inline-block rounded-lg bg-orange-100 dark:bg-orange-900/30 px-3 py-1 text-sm text-orange-800 dark:text-orange-300">
+              Haqqımızda
             </div>
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Our Story & Mission</h1>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Cruyffism Haqqında</h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              Learn about Cruyffism, our blog dedicated to Johan Cruyff's legacy and the philosophy of Total Football.
+              Cruyffism ilə – Johan Cruyff'un irsinə və Total Futbol fəlsəfəsinə həsr olunmuş bloqumuzla tanış olun.
             </p>
           </div>
         </div>
       </section>
 
-      {/* About Cruyffism */}
+      {/* Cruyffism Haqqında */}
       <section className="w-full py-12 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tighter mb-4">About Cruyffism</h2>
+              <h2 className="text-3xl font-bold tracking-tighter mb-4">Cruyffism Haqqında</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Cruyffism is a blog dedicated to exploring and celebrating the tactical genius, philosophical
-                  approach, and enduring legacy of Johan Cruyff. Founded in 2020 by a group of football enthusiasts and
-                  tactical analysts, our mission is to preserve and promote the principles that revolutionized football.
+                  Cruyffism, Johan Cruyff-un taktiki dahiliyini, fəlsəfi yanaşmasını və davamlı irsini araşdırmaq və
+                  qeyd
+                  etmək üçün yaradılmış bir bloqdur. 2020-ci ildə bir qrup futbol həvəskarı və taktiki analitik
+                  tərəfindən
+                  qurulan bu layihənin məqsədi futbolda inqilab edən prinsipləri qorumaq və yaymaqdır.
                 </p>
                 <p>
-                  We believe that Cruyff's influence extends far beyond his playing and coaching career. His ideas about
-                  space, positioning, and the role of intelligence in football continue to shape the modern game.
-                  Through in-depth articles, tactical analyses, and historical perspectives, we aim to provide a
-                  comprehensive resource for anyone interested in understanding the beautiful game at a deeper level.
+                  Biz inanırıq ki, Cruyff-un təsiri onun oyunçu və məşqçi kimi karyerasından daha uzağa gedir. Onun
+                  məkan,
+                  mövqe və futbolda intellektin rolu haqqında düşüncələri bu gün də müasir oyunu formalaşdırır. Ətraflı
+                  məqalələr, taktiki təhlillər və tarixi baxışlarla biz oyunu daha dərindən başa düşmək istəyən hər kəs
+                  üçün
+                  əhatəli bir mənbə təqdim etməyə çalışırıq.
                 </p>
                 <p>
-                  Our team consists of writers, analysts, and former players who share a passion for the game and a deep
-                  appreciation for Cruyff's contributions. We strive to make complex tactical concepts accessible to all
-                  football fans while maintaining analytical rigor and historical accuracy.
+                  Komandamız yazıçılar, analitiklər və keçmiş futbolçulardan ibarətdir. Onların hamısı futbola qarşı
+                  eyni
+                  ehtirası və Cruyff-un töhfələrinə dərin rəğbəti bölüşür. Məqsədimiz mürəkkəb taktiki anlayışları hər
+                  kəs
+                  üçün əlçatan etməkdir, analitik dəqiqlik və tarixi düzgünlüyü qoruyaraq.
                 </p>
               </div>
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden">
               <Image
                 src="/placeholder.svg?height=400&width=600"
-                alt="Cruyffism Blog Team"
+                alt="Cruyffism Bloq Komandası"
                 fill
                 className="object-cover"
               />
@@ -55,38 +63,48 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* About Johan Cruyff */}
+      {/* Johan Cruyff Haqqında */}
       <section className="w-full py-12 md:py-24 bg-orange-100 dark:bg-orange-900/20">
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="order-2 lg:order-1 relative h-[400px] rounded-xl overflow-hidden">
-              <Image src="/placeholder.svg?height=400&width=600" alt="Johan Cruyff" fill className="object-cover" />
+              <Image
+                src="/placeholder.svg?height=400&width=600"
+                alt="Johan Cruyff"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-3xl font-bold tracking-tighter mb-4">About Johan Cruyff</h2>
+              <h2 className="text-3xl font-bold tracking-tighter mb-4">Johan Cruyff Haqqında</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Hendrik Johannes Cruijff, known to the world as Johan Cruyff, was born on April 25, 1947, in
-                  Amsterdam, Netherlands. He is widely regarded as one of the greatest players in football history and
-                  one of the most influential figures in the development of modern football.
+                  Hendrik Johannes Cruijff, bütün dünyada Johan Cruyff kimi tanınırdı. O, 25 aprel 1947-ci ildə
+                  Amsterdamda
+                  anadan olub. Futbol tarixində ən böyük oyunçulardan biri və müasir futbolun inkişafında ən təsirli
+                  şəxslərdən biri hesab olunur.
                 </p>
                 <p>
-                  As a player, Cruyff was the embodiment of Total Football, a tactical system that revolutionized the
-                  game in the 1970s. He led Ajax to three consecutive European Cups from 1971 to 1973 and was the
-                  catalyst for the Netherlands' stunning performances in the 1974 World Cup, where they reached the
-                  final. His technical ability, vision, and intelligence set him apart, earning him three Ballon d'Or
-                  awards.
+                  Oyunçu kimi Cruyff, 1970-ci illərdə oyunu inqilabi şəkildə dəyişən Total Futbol sisteminin canlı
+                  siması
+                  idi. O, Ajax-ı 1971–1973-cü illər arasında ardıcıl üç dəfə Avropa Kubokunu qazanmağa apardı və 1974
+                  Dünya
+                  Çempionatında Niderlandın möhtəşəm çıxışının əsas simasına çevrildi. Onun texniki bacarığı, baxışı və
+                  oyun düşüncəsi onu fərqləndirdi və ona üç dəfə Ballon d'Or qazandırdı.
                 </p>
                 <p>
-                  After his playing career, Cruyff's influence grew even greater as a coach. At Barcelona, he laid the
-                  foundations for what would become the club's distinctive style of play, emphasizing possession,
-                  positional play, and attacking football. His legacy at Barcelona extends beyond tactics to the
-                  establishment of La Masia, the youth academy that has produced some of the world's greatest players.
+                  Karyerasını başa vurduqdan sonra Cruyff məşqçi kimi daha da böyük təsir göstərdi. Barcelona-da o,
+                  toplaşma, mövqe oyunu və hücum futboluna əsaslanan klubun bənzərsiz oyun tərzinin əsaslarını qoydu.
+                  Onun
+                  Barcelona-dakı irsi yalnız taktiki deyil, həm də dünyanın ən yaxşı futbolçularından bəzilərini
+                  yetişdirən
+                  La Masia akademiyasının qurulması ilə də bağlıdır.
                 </p>
                 <p>
-                  Cruyff's philosophy transcended football. His famous quotes reflect a unique perspective on the game
-                  and life itself. He passed away on March 24, 2016, but his ideas continue to influence football at all
-                  levels, from grassroots to the elite game.
+                  Cruyff-un fəlsəfəsi futboldan da uzağa gedirdi. Onun məşhur sitatları həm oyun, həm də həyat haqqında
+                  özünəməxsus baxış bucağını əks etdirirdi. O, 24 mart 2016-cı ildə vəfat etsə də, onun ideyaları bu gün
+                  də
+                  futbolun hər səviyyəsində — həm peşəkar, həm də həvəskar — təsir göstərməyə davam edir.
                 </p>
               </div>
             </div>
@@ -94,5 +112,5 @@ export default function AboutPage() {
         </div>
       </section>
     </>
-  )
+  );
 }
