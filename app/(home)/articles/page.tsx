@@ -81,7 +81,7 @@ export default function ArticlesPage() {
 
           {isLoading ? (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {Array.from({ length: 8 }).map((_, index) => (
+              {Array.from({ length: 6 }).map((_, index) => (
                 <SkeletonCard key={index} />
               ))}
             </div>
