@@ -3,7 +3,7 @@ import { FileText, Eye, Tag, Quote, AlertTriangle } from "lucide-react"
 import { getArticles } from "@/actions/article-actions"
 import { getQuotes } from "@/actions/quote-actions"
 import { getTags } from "@/actions/tag-actions"
-import { formatDate } from "@/lib/db"
+import { formatDate } from "@/lib/utils"
 
 export default async function DashboardPage() {
   // Fetch data from the database

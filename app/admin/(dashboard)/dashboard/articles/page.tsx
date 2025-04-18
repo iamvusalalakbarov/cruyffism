@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Plus, Edit, Trash2 } from "lucide-react"
 import { ConfirmationDialog } from "@/components/confirmation-dialog"
 import { getArticles, deleteArticle } from "@/actions/article-actions"
-import { formatDate } from "@/lib/db"
+import { formatDate } from "@/lib/utils"
 import { useToastContext } from "@/contexts/toast-context"
 import { LoadingSpinner } from "@/components/loading-spinner"
 
