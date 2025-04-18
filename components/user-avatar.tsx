@@ -62,7 +62,7 @@ export function UserAvatar({ username }: UserAvatarProps) {
         <div className="flex items-center gap-2">
           <span className="text-sm font-medium hidden sm:inline-block">{username}</span>
           <Avatar className="h-8 w-8">
-            <AvatarImage src="/placeholder.svg" alt={username} />
+            {/*<AvatarImage src="/placeholder.svg" alt={username} />*/}
             <AvatarFallback className="bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300">
               {initials}
             </AvatarFallback>

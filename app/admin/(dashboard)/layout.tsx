@@ -144,7 +144,7 @@ export default function DashboardLayout({
                       {pathname.includes("/admin/dashboard/quotes/edit") && "Edit Quote"}
                     </h1>
                   </div>
-                  <UserAvatar username="Admin User" />
+                  <UserAvatar username="Admin" />
                 </header>
                 <div className="flex-1 p-4 md:p-6 overflow-auto">
                   <div className="w-full max-w-full overflow-x-auto">{children}</div>
