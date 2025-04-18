@@ -25,7 +25,7 @@ export default function NewArticlePage() {
     description: "",
     content: "",
     image_url: "",
-    read_time: "5 min read",
+    read_time: "5",
     tags: [],
     newTag: "",
   })
