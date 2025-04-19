@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 import { Clock, Eye, Calendar } from "lucide-react"
 import { getArticleBySlug, incrementViewCount } from "@/actions/article-actions"
 import { RecentArticles } from "@/components/recent-articles"
-import { getArticles } from "@/actions/article-actions"
+// import { getArticles } from "@/actions/article-actions"
 import { formatDate } from "@/lib/utils"; // Import getArticles
 
 interface ArticlePageProps {
@@ -112,10 +112,10 @@ function markdownToHtml(markdown: string): string {
 }
 
 // Generate static params for all articles
-export async function generateStaticParams() {
-  const { articles } = await getArticles()
-
-  return articles.map((article: any) => ({
-    slug: article.slug,
-  }))
-}
+// export async function generateStaticParams() {
+//   const { articles } = await getArticles()
+//
+//   return articles.map((article: any) => ({
+//     slug: article.slug,
+//   }))
+// }
