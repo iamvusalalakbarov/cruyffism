@@ -13,7 +13,6 @@ export default function ArticlesPage() {
   const [articles, setArticles] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  console.log(articles);
 
   const articlesPerPage = 6;
 
