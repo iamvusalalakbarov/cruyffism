@@ -7,14 +7,14 @@ import { getArticles } from "@/actions/article-actions"
 import { formatDate } from "@/lib/utils"; // Import getArticles
 
 interface ArticlePageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   // Find the article with the matching slug
-  const { article, error } = await getArticleBySlug(params.slug)
+  const { article, error } = await getArticleBySlug((await params).slug)
 
   // If article not found, return 404
   if (!article) {
