@@ -1,35 +1,36 @@
-import Image from "next/image"
-import { notFound } from "next/navigation"
-import { Clock, Eye, Calendar } from "lucide-react"
-import { getArticleBySlug, incrementViewCount } from "@/actions/article-actions"
-import { RecentArticles } from "@/components/recent-articles"
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { Clock, Eye, Calendar } from "lucide-react";
+import { getArticleBySlug, incrementViewCount } from "@/actions/article-actions";
+import { RecentArticles } from "@/components/recent-articles";
 // import { getArticles } from "@/actions/article-actions"
 import { formatDate } from "@/lib/utils"; // Import getArticles
 
 interface ArticlePageProps {
   params: Promise<{
     slug: string
-  }>
+  }>;
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   // Find the article with the matching slug
-  const { article, error } = await getArticleBySlug((await params).slug)
+  const { article, error } = await getArticleBySlug((await params).slug);
 
   // If article not found, return 404
   if (!article) {
-    notFound()
+    notFound();
   }
 
   // Increment view count
   if (article.id) {
-    await incrementViewCount(article.id)
+    await incrementViewCount(article.id);
   }
 
   return (
     <>
       {/* Article Header */}
-      <section className="w-full py-12 md:py-24 bg-gradient-to-b from-orange-50 to-white dark:from-orange-950/20 dark:to-background">
+      <section
+        className="w-full py-12 md:py-24 bg-gradient-to-b from-orange-50 to-white dark:from-orange-950/20 dark:to-background">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center space-y-4 max-w-3xl mx-auto">
             <div className="flex flex-wrap justify-center gap-2">
@@ -51,11 +52,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </span>
               <span className="flex items-center">
                 <Clock className="mr-1 h-4 w-4" />
-                {article.read_time || "5"} dəqiqə oxuma vaxtı
+                {article.read_time || "5"} dəq.
               </span>
               <span className="flex items-center">
                 <Eye className="mr-1 h-4 w-4" />
-                {Number(article.view_count).toLocaleString()} baxış sayı
+                {Number(article.view_count).toLocaleString()} baxış
               </span>
             </div>
           </div>
@@ -63,7 +64,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       </section>
 
       {/* Featured Image */}
-      <div className="container px-4 md:px-6 -mt-12 mb-12">
+      <div className="container pt-4 lg:pt-0 px-4 md:px-6 -mt-12 mb-12">
         <div className="relative aspect-video overflow-hidden rounded-xl max-w-4xl mx-auto">
           <Image
             src={
@@ -80,7 +81,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       {/* Article Content */}
       <article className="container px-4 md:px-6 py-6 md:py-12">
         <div className="prose prose-orange dark:prose-invert mx-auto max-w-3xl">
-          <p className="lead">{article.description}</p>
+          {/*<p className="lead">{article.description}</p>*/}
           <div dangerouslySetInnerHTML={{ __html: markdownToHtml(article.content) }} />
         </div>
       </article>
@@ -88,11 +89,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       {/* Recent Articles */}
       <section className="w-full py-12 md:py-24 bg-orange-50 dark:bg-orange-950/10">
         <div className="container px-4 md:px-6">
-          <RecentArticles title="More Articles" excludeId={article.id} />
+          <RecentArticles title="Digər Məqalələr" excludeId={article.id} />
         </div>
       </section>
     </>
-  )
+  );
 }
 
 // Simple markdown to HTML converter for demonstration purposes
@@ -108,7 +109,7 @@ function markdownToHtml(markdown: string): string {
     .replace(/<\/li>\n<li>/g, "</li><li>")
     .replace(/^<li>/gm, "<ul><li>")
     .replace(/<\/li>$/gm, "</li></ul>")
-    .replace(/<\/ul>\n<ul>/g, "")
+    .replace(/<\/ul>\n<ul>/g, "");
 }
 
 // Generate static params for all articles

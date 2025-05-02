@@ -47,11 +47,11 @@ export function ArticleCard({ image, title, description, date, readTime, viewCou
             <div className="flex items-center gap-4">
               <span className="flex items-center text-xs text-muted-foreground">
                 <Eye className="h-3.5 w-3.5 mr-1" />
-                {viewCount} baxış sayı
+                {viewCount} baxış
               </span>
               <span className="flex items-center text-xs text-muted-foreground">
                 <Clock className="h-3.5 w-3.5 mr-1" />
-                {readTime} dəqiqə oxuma vaxtı
+                {readTime} dəq.
               </span>
             </div>
           </div>

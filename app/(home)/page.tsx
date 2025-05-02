@@ -45,13 +45,12 @@ export default async function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="flex justify-center">
+              <div className="relative w-full h-[400px]">
                 <Image
                   src={latestArticle.image_url}
-                  width={600}
-                  height={400}
+                  fill
                   alt={latestArticle.title}
-                  className="aspect-video overflow-hidden rounded-xl object-cover"
+                  className="overflow-hidden rounded-xl object-cover"
                 />
               </div>
             </div>}
