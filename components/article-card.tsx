@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Eye, Clock } from "lucide-react"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { formatDate } from "@/lib/utils";
 
 interface ArticleCardProps {
   image: string
@@ -28,7 +29,7 @@ export function ArticleCard({ image, title, description, date, readTime, viewCou
           />
         </CardHeader>
         <CardContent className="p-6 flex-grow">
-          <p className="text-xs text-muted-foreground mb-2">{date}</p>
+          <p className="text-xs text-muted-foreground mb-2">{formatDate(date)}</p>
           <CardTitle className="text-xl mb-2">{title}</CardTitle>
           <p className="text-muted-foreground line-clamp-3 mb-4">{description}</p>
         </CardContent>
