@@ -28,35 +28,30 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold tracking-tighter mb-4">Cruyffism Haqqında</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Cruyffism, Johan Cruyff-un taktiki dahiliyini, fəlsəfi yanaşmasını və davamlı irsini araşdırmaq və
-                  qeyd
-                  etmək üçün yaradılmış bir bloqdur. 2020-ci ildə bir qrup futbol həvəskarı və taktiki analitik
-                  tərəfindən
-                  qurulan bu layihənin məqsədi futbolda inqilab edən prinsipləri qorumaq və yaymaqdır.
+                  <strong>Cruyffism</strong> adını futbol tarixinə öz damğasını vurmuş <strong>Johan Cruyff</strong>'dan
+                  alan şəxsi bir futbol bloqudur.
+                  Bu bloq Cruyff'un futbol fəlsəfəsindən — sadəliyin dahiliyindən, azad düşüncənin gücündən və oyunun
+                  gözəlliyinə olan sonsuz sevgisindən ilhamlanaraq yaradılıb.
                 </p>
                 <p>
-                  Biz inanırıq ki, Cruyff-un təsiri onun oyunçu və məşqçi kimi karyerasından daha uzağa gedir. Onun
-                  məkan,
-                  mövqe və futbolda intellektin rolu haqqında düşüncələri bu gün də müasir oyunu formalaşdırır. Ətraflı
-                  məqalələr, taktiki təhlillər və tarixi baxışlarla biz oyunu daha dərindən başa düşmək istəyən hər kəs
-                  üçün
-                  əhatəli bir mənbə təqdim etməyə çalışırıq.
+                  Burada yer alan yazılar bir futbolsevərin oyuna olan baxışını, analizlərini və şəxsi rəylərini əks
+                  etdirir. Məqsəd sadəcə nəticələrə fokuslanmaq deyil, meydandakı anlayışı, taktiki yanaşmaları və
+                  futbola ruh verən detalları dərk edib, oxucularla bölüşməkdir.
                 </p>
                 <p>
-                  Komandamız yazıçılar, analitiklər və keçmiş futbolçulardan ibarətdir. Onların hamısı futbola qarşı
-                  eyni
-                  ehtirası və Cruyff-un töhfələrinə dərin rəğbəti bölüşür. Məqsədimiz mürəkkəb taktiki anlayışları hər
-                  kəs
-                  üçün əlçatan etməkdir, analitik dəqiqlik və tarixi düzgünlüyü qoruyaraq.
+                  Cruyffism futbola təkcə bir oyun kimi deyil, düşüncə tərzi kimi yanaşan bir baxışın məhsuludur.
+                  Buradakı hər bir sətir oyunu daha dərindən anlamaq və bu anlayışı yazı dili ilə ifadə etmək istəyinin
+                  səmimi nəticəsidir.
                 </p>
               </div>
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Cruyffism Bloq Komandası"
+                src="https://bymsbrand.com/cdn/shop/articles/BYMS_Soccer_The_Cruyffism_by_Johan_Cruyff2_2f5ec8ac-edcc-4891-874b-5044c417ab44.jpg?v=1741105079&width=1143"
+                alt="cruyffism"
                 fill
                 className="object-cover"
+                unoptimized
               />
             </div>
           </div>
@@ -69,7 +64,7 @@ export default function AboutPage() {
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="order-2 lg:order-1 relative h-[400px] rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="https://static01.nyt.com/images/2016/03/25/sports/25CRUYFFweb1/25CRUYFFweb1-superJumbo.jpg"
                 alt="Johan Cruyff"
                 fill
                 className="object-cover"
@@ -79,32 +74,24 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold tracking-tighter mb-4">Johan Cruyff Haqqında</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Hendrik Johannes Cruijff, bütün dünyada Johan Cruyff kimi tanınırdı. O, 25 aprel 1947-ci ildə
-                  Amsterdamda
-                  anadan olub. Futbol tarixində ən böyük oyunçulardan biri və müasir futbolun inkişafında ən təsirli
-                  şəxslərdən biri hesab olunur.
+                  Johan Cruyff, yalnız bir futbolçu və ya məşqçi deyildi. O, futbolun öz dili, öz düşüncə tərzi olan bir
+                  sənət formasına çevrilə biləcəyini sübut edən bir vizioner idi. Meydanda hər toxunuşu ilə sanki oyunla
+                  dialoqa girər, sadəliyin içindəki dərinliyi göstərərdi. Onun üçün futbol sadəcə qol vurmaq yox, oyunu
+                  anlamaq və oyunun gözəlliyini paylaşmaq idi.
                 </p>
                 <p>
-                  Oyunçu kimi Cruyff, 1970-ci illərdə oyunu inqilabi şəkildə dəyişən Total Futbol sisteminin canlı
-                  siması
-                  idi. O, Ajax-ı 1971–1973-cü illər arasında ardıcıl üç dəfə Avropa Kubokunu qazanmağa apardı və 1974
-                  Dünya
-                  Çempionatında Niderlandın möhtəşəm çıxışının əsas simasına çevrildi. Onun texniki bacarığı, baxışı və
-                  oyun düşüncəsi onu fərqləndirdi və ona üç dəfə Ballon d'Or qazandırdı.
+                  1970-ci illərin Ajax'ı və Niderland yığması ilə Cruyff, <strong>Total Futbol</strong> anlayışının
+                  canlı təcəssümünə
+                  çevrildi. O, sərhədləri olmayan bir oyunçu idi – hücumçu kimi başlayar, lazım gələrsə müdafiəyə qədər
+                  çəkilərdi. Hər mövqedə düşünə bilən, hər vəziyyətdə yarada bilən bir futbolçu idi. Məşqçilik dövrü də
+                  futbolçuluğndan geri qalmayan Cruyff həm Ajax, həm də Barcelona ilə uğurlara imza atmaqla yanaşı, bu
+                  klubların genetikasına da toxundu.
                 </p>
                 <p>
-                  Karyerasını başa vurduqdan sonra Cruyff məşqçi kimi daha da böyük təsir göstərdi. Barcelona-da o,
-                  toplaşma, mövqe oyunu və hücum futboluna əsaslanan klubun bənzərsiz oyun tərzinin əsaslarını qoydu.
-                  Onun
-                  Barcelona-dakı irsi yalnız taktiki deyil, həm də dünyanın ən yaxşı futbolçularından bəzilərini
-                  yetişdirən
-                  La Masia akademiyasının qurulması ilə də bağlıdır.
-                </p>
-                <p>
-                  Cruyff-un fəlsəfəsi futboldan da uzağa gedirdi. Onun məşhur sitatları həm oyun, həm də həyat haqqında
-                  özünəməxsus baxış bucağını əks etdirirdi. O, 24 mart 2016-cı ildə vəfat etsə də, onun ideyaları bu gün
-                  də
-                  futbolun hər səviyyəsində — həm peşəkar, həm də həvəskar — təsir göstərməyə davam edir.
+                  Cruyff'un sözləri oyunu izah etməklə kifayətlənməz, onu yenidən düşünməyə vadar edərdi: "Topa sahib
+                  olmadığın zaman, yalnız bir şey edə bilərsən – onu geri almaq". Bu cümlə onun fəlsəfəsinin nüvəsidir.
+                  Johan Cruyff'un həyatı futbolun necə oynanmalı olduğunu göstərən bir
+                  dərs idi – və bu dərs hələ də davam edir.
                 </p>
               </div>
             </div>
