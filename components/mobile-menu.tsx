@@ -54,21 +54,21 @@ export function MobileMenu() {
             className="text-lg font-medium hover:text-orange-600 transition-colors"
             onClick={closeMenu}
           >
-            Articles
+            Məqalələr
           </Link>
           <Link
             href="/about"
             className="text-lg font-medium hover:text-orange-600 transition-colors"
             onClick={closeMenu}
           >
-            About
+            Haqqımızda
           </Link>
           <Link
             href="/contact"
             className="text-lg font-medium hover:text-orange-600 transition-colors"
             onClick={closeMenu}
           >
-            Contact
+            Əlaqə
           </Link>
         </nav>
       </div>
