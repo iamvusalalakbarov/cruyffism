@@ -98,7 +98,7 @@ export default function ArticlesPage() {
                     image={article.image_url || "/placeholder.svg?height=200&width=400"}
                     title={article.title}
                     description={article.description}
-                    date={formatDate(new Date(article.date_published))}
+                    date={article.date_published}
                     readTime={article.read_time || "5 min read"}
                     viewCount={Number(article.view_count)}
                     tags={article.tags.filter(Boolean)}

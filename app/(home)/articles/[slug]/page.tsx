@@ -48,7 +48,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center">
                 <Calendar className="mr-1 h-4 w-4" />
-                {formatDate(new Date(article.date_published))}
+                {formatDate(article.date_published)}
               </span>
               <span className="flex items-center">
                 <Clock className="mr-1 h-4 w-4" />
@@ -82,7 +82,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <article className="container px-4 md:px-6 py-6 md:py-12">
         <div className="prose prose-orange dark:prose-invert mx-auto max-w-3xl">
           {/*<p className="lead">{article.description}</p>*/}
-          <div dangerouslySetInnerHTML={{ __html: markdownToHtml(article.content) }} />
+          <div className="[&_a]:no-underline" dangerouslySetInnerHTML={{ __html: markdownToHtml(article.content) }} />
+          <p className="font-medium text-orange-600 dark:text-orange-400">Vüsal Ələkbərov</p>
         </div>
       </article>
 
@@ -109,7 +110,8 @@ function markdownToHtml(markdown: string): string {
     .replace(/<\/li>\n<li>/g, "</li><li>")
     .replace(/^<li>/gm, "<ul><li>")
     .replace(/<\/li>$/gm, "</li></ul>")
-    .replace(/<\/ul>\n<ul>/g, "");
+    .replace(/<\/ul>\n<ul>/g, "")
+    .replace(/\[([^\]]+)\]\((.*?)\)/g, "<a href=\"$2\" target=\"_blank\">$1</a>");
 }
 
 // Generate static params for all articles
