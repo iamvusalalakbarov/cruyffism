@@ -6,16 +6,20 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Helper function to format dates for display
-export function formatDate(date: Date): string {
-  const formatted = new Date(date).toLocaleDateString("az-AZ", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+export function formatDate(dateStr: string): string {
+  const date = new Date(dateStr);
 
-  // Capitalize the first letter of the month name
-  return formatted.replace(
-    /(\d{1,2}) (\p{Ll}+)( \d{4})/u,
-    (_, day, month, year) => `${day} ${month[0].toUpperCase()}${month.slice(1)}${year}`,
-  );
+  const azMonths = [
+    "Yanvar", "Fevral", "Mart", "Aprel",
+    "May", "İyun", "İyul", "Avqust",
+    "Sentyabr", "Oktyabr", "Noyabr", "Dekabr",
+  ];
+
+  const day = date.getDate();
+  const month = azMonths[date.getMonth()];
+  const year = date.getFullYear();
+
+  return `${day} ${month} ${year}`;
 }
+
+
