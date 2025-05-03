@@ -33,7 +33,7 @@ ${imageMarkdown}
 
 ${article.description}
 
-👉 [Məqaləni oxu](https://cruyffism.az/article/${article.slug})
+👉 [Məqaləni oxu](https://cruyffism.vercel.app/article/${article.slug})
   `.trim();
 }
 
