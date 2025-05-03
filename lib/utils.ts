@@ -1,11 +1,11 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { ArticleFormData } from "@/lib/validations";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Helper function to format dates for display
 export function formatDate(dateStr: string): string {
   const date = new Date(dateStr);
 
@@ -21,5 +21,21 @@ export function formatDate(dateStr: string): string {
 
   return `${day} ${month} ${year}`;
 }
+
+export function generateArticleEmailMarkdown(article: ArticleFormData) {
+  const imageMarkdown = article.image_url
+    ? `![${article.title}](${article.image_url})\n\n`
+    : "";
+
+  return `
+${imageMarkdown}
+### ${article.title}
+
+${article.description}
+
+👉 [Məqaləni oxu](https://cruyffism.az/article/${article.slug})
+  `.trim();
+}
+
 
 

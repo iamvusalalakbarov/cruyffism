@@ -55,3 +55,9 @@ export const contactFormSchema = z.object({
 });
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;
+
+export const newsletterFormSchema = z.object({
+  email: z.string().email({ message: "Düzgün e-poçt ünvanı daxil edin" }),
+});
+
+export type NewsletterFormData = z.infer<typeof newsletterFormSchema>;
