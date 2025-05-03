@@ -1,19 +1,19 @@
-import Link from "next/link"
-import { ArrowRight, AlertTriangle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { ArticleCard } from "@/components/article-card"
-import { getArticles } from "@/actions/article-actions"
+import Link from "next/link";
+import { ArrowRight, AlertTriangle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArticleCard } from "@/components/article-card";
+import { getArticles } from "@/actions/article-actions";
 import { formatDate } from "@/lib/utils";
 
 interface RecentArticlesProps {
-  title?: string
-  excludeId?: string
-  count?: number
+  title?: string;
+  excludeId?: string;
+  count?: number;
 }
 
 export async function RecentArticles({ title = "Son Məqalələr", excludeId, count = 3 }: RecentArticlesProps) {
   // Get articles from the database
-  const { articles, error } = await getArticles()
+  const { articles, error } = await getArticles();
 
   // Handle error case
   if (error) {
@@ -38,23 +38,23 @@ export async function RecentArticles({ title = "Son Məqalələr", excludeId, co
           </div>
         </div>
       </section>
-    )
+    );
   }
 
   // Get articles, excluding the one with the specified ID if provided
-  const filteredArticles = excludeId ? articles.filter((article) => article.id !== excludeId) : articles
+  const filteredArticles = excludeId ? articles.filter((article) => article.id !== excludeId) : articles;
 
   // Get the specified number of articles
-  const displayArticles = filteredArticles.slice(0, count)
+  const displayArticles = filteredArticles.slice(0, count);
 
   return (
     <section className="w-full py-12 md:py-24">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-row justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold tracking-tighter">{title}</h2>
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-2xl lg:text-3xl font-bold tracking-tighter">{title}</h2>
           <Link href="/articles">
             <Button variant="outline">
-              Bütün Məqalələrə Bax
+              Hamısına bax
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -81,5 +81,5 @@ export async function RecentArticles({ title = "Son Məqalələr", excludeId, co
         </div>
       </div>
     </section>
-  )
+  );
 }

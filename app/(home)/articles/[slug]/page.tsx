@@ -89,9 +89,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
       {/* Recent Articles */}
       <section className="w-full py-12 md:py-24 bg-orange-50 dark:bg-orange-950/10">
-        <div className="container px-4 md:px-6">
-          <RecentArticles title="Digər Məqalələr" excludeId={article.id} />
-        </div>
+        <RecentArticles title="Digər Məqalələr" excludeId={article.id} />
       </section>
     </>
   );
