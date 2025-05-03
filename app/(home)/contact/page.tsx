@@ -138,7 +138,7 @@ export default function ContactPage() {
                 <Facebook className="h-10 w-10 text-orange-600 mb-4" />
                 <h3 className="text-xl font-bold mb-2">Facebook</h3>
                 <a
-                  href="https://www.facebook.com/YOUR_PROFILE"
+                  href="https://www.facebook.com/cruyffism.blog"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-orange-600 hover:text-orange-700 transition-colors"
