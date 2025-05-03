@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Facebook, Instagram } from "lucide-react";
 import CruyffismLogo from "@/components/cruyffism-logo";
 
 export function Footer() {
@@ -12,59 +13,52 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               Johan Cruyff'un adından və futbola yanaşmasından ilham alınmışdır.
             </p>
-            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Cruyffism</p>
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Cruyffism
+            </p>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="text-sm font-medium">Keçidlər</h3>
-            <nav className="flex flex-col space-y-2">
-              <Link href="/" className="text-sm text-muted-foreground hover:text-orange-600">
-                Əsas səhifə
-              </Link>
-              <Link href="/articles" className="text-sm text-muted-foreground hover:text-orange-600">
-                Məqalələr
-              </Link>
-              <Link href="/about" className="text-sm text-muted-foreground hover:text-orange-600">
-                Haqqımızda
-              </Link>
-              <Link href="/contact" className="text-sm text-muted-foreground hover:text-orange-600">
-                Əlaqə
-              </Link>
-            </nav>
+          <div className="grid grid-cols-2 lg:flex items-start gap-x-24">
+            <div className="space-y-4">
+              <h3 className="text-sm font-medium">Keçidlər</h3>
+              <nav className="flex flex-col space-y-2">
+                <Link href="/" className="text-sm text-muted-foreground hover:text-orange-600">
+                  Əsas səhifə
+                </Link>
+                <Link href="/articles" className="text-sm text-muted-foreground hover:text-orange-600">
+                  Məqalələr
+                </Link>
+                <Link href="/about" className="text-sm text-muted-foreground hover:text-orange-600">
+                  Haqqımızda
+                </Link>
+                <Link href="/contact" className="text-sm text-muted-foreground hover:text-orange-600">
+                  Əlaqə
+                </Link>
+              </nav>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-sm font-medium">Sosial şəbəkələr</h3>
+              <div className="flex items-center space-x-6">
+                <a
+                  href="https://www.facebook.com/YOUR_PROFILE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-orange-600 transition-colors"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/YOUR_PROFILE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-orange-600 transition-colors"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
           </div>
-
-          {/*<div className="space-y-4">*/}
-          {/*  <h3 className="text-sm font-medium">Categories</h3>*/}
-          {/*  <nav className="flex flex-col space-y-2">*/}
-          {/*    <Link href="#" className="text-sm text-muted-foreground hover:text-orange-600">*/}
-          {/*      Total Football*/}
-          {/*    </Link>*/}
-          {/*    <Link href="#" className="text-sm text-muted-foreground hover:text-orange-600">*/}
-          {/*      Tactical Analysis*/}
-          {/*    </Link>*/}
-          {/*    <Link href="#" className="text-sm text-muted-foreground hover:text-orange-600">*/}
-          {/*      Football History*/}
-          {/*    </Link>*/}
-          {/*    <Link href="#" className="text-sm text-muted-foreground hover:text-orange-600">*/}
-          {/*      Player Profiles*/}
-          {/*    </Link>*/}
-          {/*  </nav>*/}
-          {/*</div>*/}
-
-          {/*<div className="space-y-4">*/}
-          {/*  <h3 className="text-sm font-medium">Legal</h3>*/}
-          {/*  <nav className="flex flex-col space-y-2">*/}
-          {/*    <Link href="#" className="text-sm text-muted-foreground hover:text-orange-600">*/}
-          {/*      Terms of Service*/}
-          {/*    </Link>*/}
-          {/*    <Link href="#" className="text-sm text-muted-foreground hover:text-orange-600">*/}
-          {/*      Privacy Policy*/}
-          {/*    </Link>*/}
-          {/*    <Link href="#" className="text-sm text-muted-foreground hover:text-orange-600">*/}
-          {/*      Cookie Policy*/}
-          {/*    </Link>*/}
-          {/*  </nav>*/}
-          {/*</div>*/}
         </div>
       </div>
     </footer>

@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { useState } from "react";
-import { Mail, Phone, Send } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -105,32 +105,67 @@ export default function ContactPage() {
 
       {/* Contact Information */}
       <section className="w-full py-12 md:py-24">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-8 md:grid-cols-2 max-w-2xl mx-auto mb-12">
+        <div className="container px-4 md:px-6 max-w-4xl mx-auto">
+          <div className="grid gap-8 md:grid-cols-3 mb-12">
             <Card>
               <CardContent className="flex flex-col items-center text-center p-6">
                 <Mail className="h-10 w-10 text-orange-600 mb-4" />
                 <h3 className="text-xl font-bold mb-2">E-poçt</h3>
-                <a href="mailto:iamvusalalakbarov@gmail.com"
-                   className="text-orange-600 hover:text-orange-700 transition-colors">
-                  iamvusalalakbarov@gmail.com
+                <a
+                  href="mailto:cruyffism.blog@gmail.com"
+                  className="text-orange-600 hover:text-orange-700 transition-colors"
+                >
+                  cruyffism.blog@gmail.com
+                </a>
+              </CardContent>
+            </Card>
+
+            {/*<Card>*/}
+            {/*  <CardContent className="flex flex-col items-center text-center p-6">*/}
+            {/*    <Phone className="h-10 w-10 text-orange-600 mb-4" />*/}
+            {/*    <h3 className="text-xl font-bold mb-2">Telefon</h3>*/}
+            {/*    <a*/}
+            {/*      href="tel:+994993651951"*/}
+            {/*      className="text-orange-600 hover:text-orange-700 transition-colors"*/}
+            {/*    >*/}
+            {/*      +994 99 365 19 51*/}
+            {/*    </a>*/}
+            {/*  </CardContent>*/}
+            {/*</Card>*/}
+
+            <Card>
+              <CardContent className="flex flex-col items-center text-center p-6">
+                <Facebook className="h-10 w-10 text-orange-600 mb-4" />
+                <h3 className="text-xl font-bold mb-2">Facebook</h3>
+                <a
+                  href="https://www.facebook.com/YOUR_PROFILE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-600 hover:text-orange-700 transition-colors"
+                >
+                  @cruyffism.blog
                 </a>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="flex flex-col items-center text-center p-6">
-                <Phone className="h-10 w-10 text-orange-600 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Telefon</h3>
-                <a href="tel:+994993651951" className="text-orange-600 hover:text-orange-700 transition-colors">
-                  +994 99 365 19 51
+                <Instagram className="h-10 w-10 text-orange-600 mb-4" />
+                <h3 className="text-xl font-bold mb-2">Instagram</h3>
+                <a
+                  href="https://www.instagram.com/cruyffism.blog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-600 hover:text-orange-700 transition-colors"
+                >
+                  @cruyffism.blog
                 </a>
               </CardContent>
             </Card>
           </div>
 
           {/* Contact Form */}
-          <div className="max-w-2xl mx-auto">
+          <div>
             <h2 className="text-2xl font-bold text-center mb-6">Əlaqə Formu</h2>
 
             {/* Alert Message */}
