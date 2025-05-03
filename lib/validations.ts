@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from "zod";
 
 // Article validation schema
 export const articleSchema = z.object({
@@ -17,9 +17,9 @@ export const articleSchema = z.object({
   read_time: z.string().optional(),
   tags: z.array(z.string()),
   newTag: z.string().optional(),
-})
+});
 
-export type ArticleFormData = z.infer<typeof articleSchema>
+export type ArticleFormData = z.infer<typeof articleSchema>;
 
 // Quote validation schema
 export const quoteSchema = z.object({
@@ -28,21 +28,30 @@ export const quoteSchema = z.object({
   year: z.string().optional(),
   category: z.string().min(1, "Category is required"),
   featured: z.boolean(),
-})
+});
 
-export type QuoteFormData = z.infer<typeof quoteSchema>
+export type QuoteFormData = z.infer<typeof quoteSchema>;
 
 // Tag validation schema
 export const tagSchema = z.object({
   name: z.string().min(1, "Tag name is required").max(100, "Tag name must be less than 100 characters"),
-})
+});
 
-export type TagFormData = z.infer<typeof tagSchema>
+export type TagFormData = z.infer<typeof tagSchema>;
 
 // Login validation schema
 export const loginSchema = z.object({
   username: z.string().min(1, "Username is required"),
   password: z.string().min(1, "Password is required"),
-})
+});
 
-export type LoginFormData = z.infer<typeof loginSchema>
+export type LoginFormData = z.infer<typeof loginSchema>;
+
+export const contactFormSchema = z.object({
+  name: z.string().min(2, { message: "Ad minimum 2 simvol olmalıdır" }),
+  email: z.string().email({ message: "Düzgün e-poçt ünvanı daxil edin" }),
+  subject: z.string().min(5, { message: "Mövzu minimum 5 simvol olmalıdır" }),
+  message: z.string().min(10, { message: "Müraciət minimum 10 simvol olmalıdır" }),
+});
+
+export type ContactFormData = z.infer<typeof contactFormSchema>;
