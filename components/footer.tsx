@@ -41,7 +41,7 @@ export function Footer() {
               <h3 className="text-sm font-medium">Sosial şəbəkələr</h3>
               <div className="flex items-center space-x-6">
                 <a
-                  href="https://www.facebook.com/YOUR_PROFILE"
+                  href="https://www.facebook.com/cruyffism.blog"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-orange-600 transition-colors"
@@ -49,7 +49,7 @@ export function Footer() {
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://www.instagram.com/YOUR_PROFILE"
+                  href="https://www.instagram.com/cruyffism.blog"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-orange-600 transition-colors"
