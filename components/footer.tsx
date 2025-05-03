@@ -1,4 +1,5 @@
-import Link from "next/link"
+import Link from "next/link";
+import CruyffismLogo from "@/components/cruyffism-logo";
 
 export function Footer() {
   return (
@@ -6,11 +7,8 @@ export function Footer() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col md:flex-row gap-16">
           <div className="max-w-80 space-y-4">
-            <div className="flex items-center gap-2">
-              <Link href="/" className="text-xl font-bold text-orange-600 hover:text-orange-700 transition-colors">
-                Cruyffism
-              </Link>
-            </div>
+            <CruyffismLogo />
+
             <p className="text-sm text-muted-foreground">
               Johan Cruyff'un adından və futbola yanaşmasından ilham alınmışdır.
             </p>
@@ -70,5 +68,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
